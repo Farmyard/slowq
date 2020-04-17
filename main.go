@@ -38,10 +38,10 @@ func open(opt *Option) (*sql.DB, error) {
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "slowkill"
-	app.Usage = "A golang convenient converter supports Database to Struct"
+	app.Name = "slowq"
+	app.Usage = "Kill mysql slow query process"
 	app.Version = "0.0.0"
-	app.UsageText = "slowkill [GLOBAL OPTIONS] [DATABASE]"
+	app.UsageText = "slowq [GLOBAL OPTIONS]"
 	app.UseShortOptionHandling = true
 	app.Flags = []cli.Flag{
 		&cli.StringFlag{
@@ -71,7 +71,7 @@ func main() {
 			Name:    "time",
 			Aliases: []string{"t"},
 			Value:   15,
-			Usage:   "slowtime.",
+			Usage:   "slow timeout.",
 		},
 	}
 	app.Action = func(c *cli.Context) error {
