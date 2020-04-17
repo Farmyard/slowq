@@ -25,7 +25,7 @@ GLOBAL OPTIONS:
    --port value, -P value      Port number to use for connection. Honors $MYSQL_TCP_PORT. (default: 3306)
    --username value, -u value  User name to connect to the database. (default: "root")
    --password value, -p value  Password to connect to the database.
-   --database value, -D value  Database to use.
+   --time value, -t value      slow timeout.
    --help                      Show this message and exit (default: false)
    --version                   Output mycli's version. (default: false)
 ```
